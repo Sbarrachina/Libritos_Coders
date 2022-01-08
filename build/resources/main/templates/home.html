@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head"></head>
+
+<body>
+<header th:replace="fragments/header"></header>
+
+<br><br>
+<section class="container">
+    <h2>Bienvenido/a </h2>
+    <p>Go to the <a href="/books/">Coders</a> section or <a href="/books/new">create a new coders</a></p>
+
+    <div class="slider">
+
+        <ul>
+            <li> <img class="slider1" th:src="@{/assets/coderSlider1.png}" alt="slider1"></li>
+            <li> <img class="slider2" th:src="@{/assets/coderSlider2.png}" alt="slider2"></li>
+            <li> <img class="slider3" th:src="@{/assets/coderSlider3.png}" alt="slider3"></li>
+            <li> <img class="slider4" th:src="@{/assets/coderSlider4.png}" alt="slider4"></li>
+
+        </ul>
+    </div>
+
+
+</section>
+
+<footer th:replace="fragments/footer"></footer>
+</body>
+</html>

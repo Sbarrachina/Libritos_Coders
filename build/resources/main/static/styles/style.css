@@ -1,0 +1,203 @@
+
+body{
+    margin: 0;
+   background-color: #afdebe;
+}
+
+.container-fluid{
+    background-color:white ;
+    padding:50px;
+    margin: 0px;
+    font-size: 20px;
+
+}
+
+.icon1{
+    width: 10%;
+}
+
+
+/*SEARCH- BUSQUEDA*/
+
+nav form{
+    display: flex;
+    height: 40px;
+    padding: 0px;
+    background: white;
+    min-width: 18%!important;
+    border-radius: 2px;
+    border: 1px solid rgba(155,155,155,0.2);
+}
+nav form .search-data{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    color: #170f0f;
+    font-size: 17px;
+    border: none;
+    font-weight: 500;
+    background: none;
+}
+nav form button{
+    padding: 5 20px;
+    color: #fff;
+    font-size: 17px;
+    background: #afdebe;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+nav form button:hover{
+    background: #e63600;
+}
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon{
+    width: 40px;
+    text-align: center;
+    margin: 0 50px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+footer{
+    padding: 20px;
+    margin: 20px;
+}
+/*Slider */
+
+.slider{
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 20s infinite alternate;
+    animation-timing-function: ease-in-out ;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100;}
+
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+}
+/*Iconos barra de inicio */
+
+.Iconraton{
+    width: 5%;
+}
+.listadoicono{
+    width: 10%;
+}
+
+.Iconnew{
+    width: 15%;
+}
+
+/*modo tarjeta*/
+
+.book-list {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 350px;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    transition-duration: 0.2s;
+}
+
+.book:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 5px 2px 2px #fcf3cf;
+}
+
+.book .img-container {
+    width: 80%;
+    height: 145px;
+    margin: auto;
+}
+
+.book .img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.book .info {
+    margin: 10px 20px;
+    font-size: 16px;
+}
+
+.book .buttons {
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.book-filters {
+    list-style: none;
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+    float: left;
+}
+
+.book-filters li  img   {
+    margin: 0 10px;
+    padding:10px;
+
+}
+
+/*Iconos fitros*/
+
+
+
+.iconAll{
+    width: 10%;
+
+}
+.iconciudad{
+    width: 10%;
+
+}
+.iconnombre{
+width: 5%;
+
+}
+.book-filters2{
+    list-style: none;
+
+}
+.book-filters3{
+    list-style: none;
+
+}
+.book-filters4{
+    list-style: none;
+
+}
