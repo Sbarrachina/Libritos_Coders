@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head"></head>
+<body>
+<header th:replace="fragments/header"></header>
+
+<br> <br>
+<section class="container">
+    <h1 th:text="${title}"></h1>
+    <br>
+
+    <form th:action="@{/books/new}" th:object="${book}" method="post">
+        <div class="form-group">
+            <input type="hidden" th:field="*{id}">
+            <label class="col-md2" for="nombre">Nombre</label>
+            <input th:field="*{nombre}" type="text" class="col-md6 form-control form-control-sm" id="nombre"
+                   placeholder="Enter nombre">
+        </div>
+        <div class="form-group">
+            <label class="col-md2" for="edad">Edad</label>
+            <input th:field="*{edad}" type="text" class="col-md6 form-control form-control-sm" id="edad"
+                   placeholder="Enter edad">
+        </div>
+
+        <div class="form-group">
+            <label class="col-md2" for="pais">Pais</label>
+            <input th:field="*{pais}" type="text" class="col-md6 form-control form-control-sm" id="pais"
+                   placeholder="Enter pais">
+        </div>
+
+        <div class="form-group">
+            <label class="col-md2" for="localidad">Localidad</label>
+            <input th:field="*{localidad}" type="text" class="col-md6 form-control form-control-sm" id="localidad"
+                   placeholder="Enter localidad">
+        </div>
+
+        <div class="form-group">
+            <label class="col-md2" for="estudios">Estudios</label>
+            <input th:field="*{estudios}" type="text" class="col-md6 form-control form-control-sm" id="estudios"
+                   placeholder="Enter estudios">
+        </div>
+
+        <div class="form-group">
+            <label class="col-md2" for="promo">Promo</label>
+            <input th:field="*{promo}" type="text" class="col-md6 form-control form-control-sm" id="promo"
+                   placeholder="Enter promo">
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-md2" for="coverImage">CoverImage</label>
+            <input th:field="*{image}" type="url" class="col-md6 form-control form-control-sm" id="coverImage"
+                   placeholder="Add an image url">
+        </div>
+        <div class="card-footer ">
+            <input type="submit" class="btn btn-primary btn-sm" value="Save"/>
+        </div>
+    </form>
+</section>
+<footer th:replace="fragments/footer"></footer>
+</body>
+</html>

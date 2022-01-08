@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/head"></head>
+<body>
+<header th:replace="fragments/header"></header>
+<br><br>
+<section class="container">
+    <h1 th:text="${title}"></h1>
+
+    <div class="book-list">
+        <div class="book" th:each="book: ${books}">
+            <div class="img-container">
+                <img th:src="${book.image}">
+            </div>
+            <div class="info">
+                <div th:text="${book.nombre}"></div>
+                <div th:text="${book.edad}"></div>
+                <div th:text="${book.apellidos}"></div>
+
+                <div th:text="${book.pais}"></div>
+                <div th:text="${book.localidad}"></div>
+                <div th:text="${book.estudios}"></div>
+                <div th:text="${book.promo}"></div>
+
+            </div>
+            <div class="buttons" sec:authorize="isAuthenticated()">
+                <a class="btn btn-success btn-sm" th:href="'/books/'+${book.id} + '/edit'">Edit</a>
+                <a class="btn btn-danger btn-sm" th:href="'/books/'+${book.id}+'/delete'">Delete</a>
+            </div>
+        </div>
+    </div>
+</section>
+<footer th:replace="fragments/footer"></footer>
+</body>
+</html>
